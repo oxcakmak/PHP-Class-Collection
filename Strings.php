@@ -22,65 +22,6 @@ class Strings {
     }
 
     /**
-     * Checks if a string starts with a given target substring at a specific position.
-     *
-     * @param string $text The string to check.
-     * @param string $targetString The target substring to search for.
-     * @param int $startingPosition (optional) The starting position within the string to check from. Defaults to 0 (beginning of the string).
-     * @throws InvalidArgumentException If the starting position is negative.
-     * @return bool True if the string starts with the target substring at the specified position, false otherwise.
-     */
-    public function checkStringStartsWith(string $text, string $targetString, int $startingPosition = 0): bool
-    {
-        $textLength = strlen($text);
-
-        // Validate starting position
-        if ($startingPosition < 0) {
-            throw new InvalidArgumentException('Starting position cannot be negative.');
-        }
-
-        // Handle position exceeding string length
-        if ($startingPosition > $textLength) {
-            $startingPosition = $textLength;
-        }
-
-        // Check if the substring starting at $startingPosition matches the target
-        return substr($text, $startingPosition, strlen($targetString)) === $targetString;
-    }
-
-    /**
-     * Checks if a string ends with a given target substring at a specific position.
-     *
-     * @param string $text The string to check.
-     * @param string $targetString The target substring to search for.
-     * @param int $endingPosition (optional) The ending position within the string to check up to. Defaults to null (entire string).
-     * @throws InvalidArgumentException If the ending position is negative or exceeds the string length.
-     * @return bool True if the string ends with the target substring at the specified position, false otherwise.
-     */
-    function checkStringEndsWith(string $text, string $targetString, int $endingPosition = null): bool
-    {
-        $textLength = strlen($text);
-        $targetLength = strlen($targetString);
-
-        // Validate ending position
-        if ($endingPosition !== null) {
-            if ($endingPosition < 0) {
-            throw new InvalidArgumentException('Ending position cannot be negative.');
-            } elseif ($endingPosition > $textLength) {
-            throw new InvalidArgumentException('Ending position cannot exceed string length.');
-            }
-        }
-
-        // Handle default ending position (entire string)
-        if ($endingPosition === null) {
-            $endingPosition = $textLength;
-        }
-
-        // Check if the substring ending at $endingPosition matches the target
-        return $endingPosition >= $targetLength && substr($text, $endingPosition - $targetLength, $targetLength) === $targetString;
-    }
-
-    /**
      * Converts a string from its detected encoding to UTF-8.
      *
      * @param string $text The string to convert.
