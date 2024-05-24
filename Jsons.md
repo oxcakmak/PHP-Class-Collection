@@ -17,7 +17,7 @@ require_once 'Jsons.php';
 $jsons = new Jsons();
 ```
 
-encodeJson
+### encodeJson
 Encodes a PHP variable to JSON format.
 ```php
 $data = ['name' => 'John', 'age' => 30];
@@ -25,7 +25,7 @@ $encodedJson = $jsons->encodeJson($data);
 echo $encodedJson; // Output: {"name":"John","age":30}
 ```
 
-decodeJson
+### decodeJson
 Decodes a JSON string into a PHP variable.
 ```php
 $jsonString = '{"name":"Jane","age":25}';
@@ -33,14 +33,14 @@ $decodedData = $jsons->decodeJson($jsonString);
 print_r($decodedData); // Output: Array([name] => Jane, [age] => 25)
 ```
 
-validateJson
+### validateJson
 Validates the structure of a JSON string.
 ```php
 $isJsonValid = $jsonHandler->validateJson($encodedJson);
 echo "Is JSON valid? " . ($isJsonValid ? 'Yes' : 'No'); // Is JSON valid? Yes
 ```
 
-beautifyJson
+### beautifyJson
 Beautifies a JSON string for readability.
 ```php
 $uglyJson = '{"key1":"value1","key2":"value2"}';
@@ -54,7 +54,7 @@ echo $beautifiedJson; // Output:
 */
 ```
 
-formatJson
+### formatJson
 Formats a JSON string into a well-presented, human-readable format.
 ```php
 $jsonString = '{"name":"Alice","age":35}';
@@ -68,7 +68,7 @@ echo $formattedJson; // Output:
 */
 ```
 
-paginateToJsonSecure
+### paginateToJsonSecure
 Paginates an array of data and returns a secure and comprehensive JSON response with pagination details.
 ```php
 $data = ['item1', 'item2', 'item3', 'item4', 'item5'];
