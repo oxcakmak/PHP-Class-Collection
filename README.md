@@ -2,24 +2,23 @@
 An improved functional class list that will make your work easier in PHP software.
 
 ### Table of Contents
-
-**[Arrays](Arrays.md)** 
-**[Checks](Checks.md)**
-**[Comprasions](Comprasions.md)**
-**[Dates](Dates.md)**
-**[Expressions](#Expressions.md)**
-**[Files](Files.md)**
-**[Generators](Generators.md)**
-**[Hashings](Hashings.md)**
-**[Jsons](Jsons.md)**
-**[Maths](Maths.md)**
-**[Numbers](Numbers.md)**
-**[Objects](Objects.md)**
-**[Operators](Operators.md)**
-**[Strings](Strings.md)**
-**[Times](Times.md)**
-**[Urls](Urls.md)**
-**[Validates](Validates.md)**
+**[Arrays](Arrays.md)**  
+**[Checks](Checks.md)**  
+**[Comprasions](Comprasions.md)**  
+**[Dates](Dates.md)**  
+**[Expressions](Expressions.md)**  
+**[Files](Files.md)**  
+**[Generators](Generators.md)**  
+**[Hashings](Hashings.md)**  
+**[Jsons](Jsons.md)**  
+**[Maths](Maths.md)**  
+**[Numbers](Numbers.md)**  
+**[Objects](Objects.md)**  
+**[Operators](Operators.md)**  
+**[Strings](Strings.md)**  
+**[Times](Times.md)**  
+**[Urls](Urls.md)**  
+**[Validates](Validates.md)**  
 
 ## Support Me
 
