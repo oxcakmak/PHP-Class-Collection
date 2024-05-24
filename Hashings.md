@@ -4,10 +4,10 @@ Hashings section
 
 ### Table of Contents
 
-**[hashPasswordSecure](#hashPasswordSecure)**
-**[verifyPasswordSecure](#verifyPasswordSecure)**
-**[isPotentialHash](#isPotentialHash)**
-**[generateSecureHash](#generateSecureHash)**
+**[hashPasswordSecure](#hashPasswordSecure)**  
+**[verifyPasswordSecure](#verifyPasswordSecure)**  
+**[isPotentialHash](#isPotentialHash)**  
+**[generateSecureHash](#generateSecureHash)**  
 
 ### Preparation
 
