@@ -12,7 +12,7 @@ Hashings section
 ### Preparation
 
 ```php
-require_once 'Comprasions.php';
+require_once 'Hashings.php';
 $hashings = new Hashings();
 ```
 
