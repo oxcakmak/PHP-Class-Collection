@@ -13,7 +13,7 @@ Jsons section
 ### Preparation
 
 ```php
-require_once 'Comprasions.php';
+require_once 'Jsons.php';
 $jsons = new Jsons();
 ```
 
