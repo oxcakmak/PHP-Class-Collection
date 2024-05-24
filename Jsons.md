@@ -9,6 +9,7 @@ Jsons section
 **[validateJson](#validateJson)**  
 **[beautifyJson](#beautifyJson)**  
 **[formatJson](#formatJson)**  
+**[paginateToJsonSecure](#paginateToJsonSecure)**  
 
 ### Preparation
 
