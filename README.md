@@ -7,7 +7,7 @@ An improved functional class list that will make your work easier in PHP softwar
 **[Checks](#https://github.com/oxcakmak/PHP-Class-Collection/blob/main/Checks.md)**
 **[Comprasions](#https://github.com/oxcakmak/PHP-Class-Collection/blob/main/Comprasions.md)**
 **[Dates](#https://github.com/oxcakmak/PHP-Class-Collection/blob/main/Dates.md)**
-**[Expressions](#https://github.com/oxcakmak/PHP-Class-Collection/blob/main/Expressions.md)**
+**[Expressions](#Expressions.md)**
 **[Files](#https://github.com/oxcakmak/PHP-Class-Collection/blob/main/Files.md)**
 **[Generators](#https://github.com/oxcakmak/PHP-Class-Collection/blob/main/Generators.md)**
 **[Hashings](#https://github.com/oxcakmak/PHP-Class-Collection/blob/main/Hashings.md)**
