@@ -1,0 +1,22 @@
+# Comprasions
+
+Comparison section
+
+### Table of Contents
+
+**[isEqual](#isEqual)**
+
+### Preparation
+
+```php
+require_once 'Comprasions.php';
+$comparisons = new Comprasions();
+```
+
+### isEqual
+
+isEqual
+
+```php
+
+```

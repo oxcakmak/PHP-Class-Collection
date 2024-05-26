@@ -91,6 +91,63 @@ class Strings {
         return $escapedText;
     }
 
+    /**
+     * Removes all whitespace characters from a string.
+     *
+     * This function utilizes a regular expression to efficiently remove all
+     * whitespace characters, including spaces, tabs, newlines, carriage returns,
+     * null bytes, and vertical tabs.
+     *
+     * @param string $str The input string containing whitespaces.
+     * @return string The string with all whitespaces removed.
+     *
+     * @throws InvalidArgumentException If the input string is not a string.
+     */
+    function stripAllWhitespace(string $str): string
+    {
+        if (!is_string($str)) {
+            throw new InvalidArgumentException('Input must be a string.');
+        }
+
+        return preg_replace('/\s+/', '', $str);
+    }
+
+    /**
+     * Truncates a string to a specified length without cutting a word off.
+     *
+     * This function ensures the truncated string ends with a whole word. If 
+     * the string is shorter than the specified length, it returns the original string.
+     *
+     * @param string $string The string to truncate.
+     * @param int $maxLength The maximum length of the truncated string.
+     * @param string $ending (optional) The string to append to the end of the 
+     * truncated string (default: "...").
+     * @return string The truncated string.
+     *
+     * @throws InvalidArgumentException If the input string or maximum length is not valid.
+     */
+    function truncateStringWithoutCuttingWord(string $string, int $maxLength, string $ending = "..."): string
+    {
+    if (!is_string($string) || !is_int($maxLength) || $maxLength <= 0) {
+        throw new InvalidArgumentException('Invalid input: string or maximum length must be a string and positive integer, respectively.');
+    }
+
+    if (strlen($string) <= $maxLength) {
+        return $string; // String is already shorter or equal to max length
+    }
+
+    // Find the last space within the allowed length
+    $lastSpace = strrpos(substr($string, 0, $maxLength), ' ');
+
+    if ($lastSpace !== false) {
+        // Truncate at the last space and append the ending
+        return substr($string, 0, $lastSpace) . $ending;
+    } else {
+        // No space found within the limit, truncate at max length
+        return substr($string, 0, $maxLength) . $ending;
+    }
+    }
+
 }
 
 ?>

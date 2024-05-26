@@ -129,6 +129,9 @@ class Generators {
             return rand((int) $lowerBound, (int) $upperBound);
         }
     }
+
+   
+
 }
 
 ?>
