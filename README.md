@@ -1,6 +1,15 @@
 # PHP-Class-Collection
 An improved functional class list that will make your work easier in PHP software.
 
+## Support Me
+
+This software is developed during my free time and I will be glad if somebody will support me.
+
+Everyone's time should be valuable, so please consider donating.
+
+[https://buymeacoffee.com/oxcakmak](https://buymeacoffee.com/oxcakmak)
+
+
 ### Table of Contents
 **[Arrays](Arrays.md)**  
 **[Checks](Checks.md)**  
@@ -20,10 +29,10 @@ An improved functional class list that will make your work easier in PHP softwar
 **[Urls](Urls.md)**  
 **[Validates](Validates.md)**  
 
-## Support Me
-
-This software is developed during my free time and I will be glad if somebody will support me.
-
-Everyone's time should be valuable, so please consider donating.
-
-[https://buymeacoffee.com/oxcakmak](https://buymeacoffee.com/oxcakmak)
+### Update Log
+#### v1.0.2
+```
+Strings:
++stripAllWhitespace
++truncateStringWithoutCuttingWord
+```
