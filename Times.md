@@ -16,7 +16,7 @@ $times = new Times();
 
 ### getCurrentDateTime
 
-getCurrentDateTime
+Gets the current date and time in a formatted string.
 
 ```php
 $currentDate = $times->getCurrentDateTime();
@@ -33,7 +33,7 @@ echo "Time only: $timeOnly\n";
 
 ### timeAgo
 
-timeAgo
+Calculates the time difference between a given date and the current date and returns a user-friendly string representation.
 
 ```php
 $date = '2024-06-11 18:00:00'; // Adjust as needed
