@@ -7,7 +7,9 @@ Generators section
 **[generateStrongPassword](#generateStrongPassword)**  
 **[generateRandomString](#generateRandomString)**  
 **[generateRandomHexColor](#generateRandomHexColor)**  
-**[generateRandomNumber](#generateRandomNumber)**
+**[generateRandomNumber](#generateRandomNumber)**  
+**[generateSimpleId](#generateSimpleId)**  
+**[generateSimpleUuid](#generateSimpleUuid)**  
 
 ### Preparation
 
@@ -50,4 +52,26 @@ Generates a random number within a specified range, optionally allowing floating
 ```php
 $randomNumber = $generators->generateRandomNumber(10, 20, true);
 echo $randomNumber;
+```
+
+### generateSimpleId
+
+Generates a simple 20-character ID consisting of numbers, starting with 1.
+
+```php
+try {
+  $tweetId = $generators->generateSimpleId();
+  echo $tweetId; // Outputs a 20-character ID like "12345678901234567890"
+} catch (Exception $e) {
+  echo "Error generating ID: " . $e->getMessage();
+}
+```
+
+### generateSimpleUuid
+
+Generates a simple 32-character string resembling a version 4 UUID.
+
+```php
+$uuid = $generators->generateSimpleUuid();
+echo $uuid; // Outputs a 32-character string similar to "9baeabe4-c224-0786-6484-67bee363622e"
 ```
