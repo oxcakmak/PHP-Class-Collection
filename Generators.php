@@ -130,7 +130,64 @@ class Generators {
         }
     }
 
-   
+   /**
+     * Generates a simple 20-character ID consisting of numbers, starting with 1.
+     *
+     * This function is suitable for scenarios where a unique but non-cryptographically
+     * secure identifier is needed. For more robust unique identifiers, consider
+     * using UUIDs or database-generated sequences.
+     *
+     * @return string The generated 20-character ID.
+     * @throws Exception If random number generation fails.
+     */
+    function generateSimpleId(): string
+    {
+      $id = '';
+      for ($i = 0; $i < 20; $i++) {
+        try {
+          // Generate a random digit (1-9) using a secure method
+          $digit = random_int(1, 9);
+        } catch (UnexpectedValueException $e) {
+          throw new Exception("Failed to generate random digit: " . $e->getMessage());
+        }
+        $id .= (string) $digit;
+      }
+    
+      return '1' . $id; // Prepend '1' to ensure it starts with 1
+    }
+
+    /**
+     * Generates a simple 32-character string resembling a version 4 UUID.
+     *
+     * This function utilizes random_bytes and formatting to create a string
+     * with the same structure as a version 4 UUID. However, it does not guarantee
+     * cryptographic randomness. Consider libraries like Ramsey/uuid for stronger
+     * security needs.
+     *
+     * @return string The generated 32-character string resembling a version 4 UUID.
+     * @throws Exception If random byte generation fails.
+     */
+    function generateSimpleUuid(): string
+    {
+      try {
+        $bytes = random_bytes(16); // Generate 16 random bytes
+      } catch (UnexpectedValueException $e) {
+        throw new Exception("Failed to generate random bytes: " . $e->getMessage());
+      }
+    
+      // Format the bytes into the desired UUID structure (version 4)
+      $hex = bin2hex($bytes);
+      $uuid = sprintf('%08s-%04s-%04s-%04s-%012s',
+        substr($hex, 0, 8),
+        substr($hex, 8, 4),
+        substr($hex, 12, 4),
+        substr($hex, 16, 4),
+        substr($hex, 20)
+      );
+    
+      // Convert to uppercase for consistency with version 4 format
+      return $uuid;
+    }
 
 }
 
