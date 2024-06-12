@@ -29,9 +29,18 @@ Everyone's time should be valuable, so please consider donating.
 **[Urls](Urls.md)**  
 **[Validates](Validates.md)**  
 
-### Update Log
-#### v1.0.2
+#### Added Functions
 ```
+[v1.0.3]
+Generators:
++generateSimpleId
++generateSimpleUuid
+
+Times:
++getCurrentDateTime
++timeAgo
+
+[v1.0.2]
 Strings:
 +stripAllWhitespace
 +truncateStringWithoutCuttingWord
