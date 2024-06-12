@@ -18,6 +18,7 @@ Everyone's time should be valuable, so please consider donating.
 **[Expressions](Expressions.md)**  
 **[Files](Files.md)**  
 **[Generators](Generators.md)**  
+**[Gets](Gets.md)**  
 **[Hashings](Hashings.md)**  
 **[Jsons](Jsons.md)**  
 **[Maths](Maths.md)**  
@@ -32,6 +33,9 @@ Everyone's time should be valuable, so please consider donating.
 #### Added Functions
 ```
 [v1.0.3]
+Gets:
++getCurrentIpAddress
+
 Generators:
 +generateSimpleId
 +generateSimpleUuid
