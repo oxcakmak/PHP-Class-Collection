@@ -8,7 +8,8 @@ Strings section
 **[convertToUtf8](#convertToUtf8)**  
 **[sanitizeOutput](#sanitizeOutput)**  
 **[escapeXss](#escapeXss)**  
-**[stripAllWhitespace](#stripAllWhitespace)**
+**[stripAllWhitespace](#stripAllWhitespace)**  
+**[truncateStringWithoutCuttingWord](#truncateStringWithoutCuttingWord)**  
 
 ### Preparation
 
