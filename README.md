@@ -32,6 +32,10 @@ Everyone's time should be valuable, so please consider donating.
 
 #### Added Functions
 ```
+[v1.0.4]
+Generators:
++generateNextCode
+
 [v1.0.3]
 Gets:
 +getCurrentIpAddress
