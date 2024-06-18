@@ -10,6 +10,7 @@ Generators section
 **[generateRandomNumber](#generateRandomNumber)**  
 **[generateSimpleId](#generateSimpleId)**  
 **[generateSimpleUuid](#generateSimpleUuid)**  
+**[generateNextCode](#generateNextCode)**  
 
 ### Preparation
 
@@ -74,4 +75,14 @@ Generates a simple 32-character string resembling a version 4 UUID.
 ```php
 $uuid = $generators->generateSimpleUuid();
 echo $uuid; // Outputs a 32-character string similar to "9baeabe4-c224-0786-6484-67bee363622e"
+```
+
+### generateNextCode
+
+Generates the next code based on the provided input code.
+
+```php
+$currentCode = "9z";
+$nextCode = $generators->generateNextCode($currentCode);
+echo "Original code: $currentCode, Next code: $nextCode";
 ```
