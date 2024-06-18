@@ -189,6 +189,47 @@ class Generators {
       return $uuid;
     }
 
+    /**
+     * Generates the next code based on the provided input code.
+     *
+     * The code format is assumed to consist of digits, lowercase letters, and uppercase letters.
+     * This function increments the code by one character at a time, handling overflow and wrapping.
+     *
+     * @param string $currentCode The current code to be incremented.
+     * @return string The next code in the sequence.
+     * @throws Exception If the provided code contains invalid characters.
+     */
+    function generateNextCode(string $currentCode): string
+    {
+        $carry = 1; // Start with carry for potential increment
+        $nextCode = '';
+    
+        for ($i = strlen($currentCode) - 1; $i >= 0; $i--) {
+            $char = $currentCode[$i];
+    
+            switch (true) {
+                case ctype_digit($char):
+                    $nextChar = ($char === '9') ? '0' : chr(ord($char) + 1);
+                    $carry = 0;
+                    break;
+                case ctype_lower($char):
+                    $nextChar = ($char === 'z') ? 'a' : chr(ord($char) + 1);
+                    $carry = 0;
+                    break;
+                case ctype_upper($char):
+                    $nextChar = ($char === 'Z') ? 'A' : chr(ord($char) + 1);
+                    carry = 0;
+                    break;
+                default:
+                    throw new Exception("Invalid character '{$char}' in the code.");
+            }
+    
+            $nextCode = $nextChar . $nextCode;
+        }
+    
+        return ($carry === 1) ? '0' . $nextCode : $nextCode; // Prepend '0' if carry remains
+    }
+    
 }
 
 ?>
