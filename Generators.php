@@ -218,7 +218,7 @@ class Generators {
                     break;
                 case ctype_upper($char):
                     $nextChar = ($char === 'Z') ? 'A' : chr(ord($char) + 1);
-                    carry = 0;
+                    $carry = 0;
                     break;
                 default:
                     throw new Exception("Invalid character '{$char}' in the code.");
