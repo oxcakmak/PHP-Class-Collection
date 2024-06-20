@@ -30,7 +30,44 @@ class Gets {
     return null; 
   }
 
+  /**
+   * Generates the next character in the sequence based on the provided input code.
+   *
+   * @param string $currentCode The current code in the sequence.
+   * @return string The next code in the sequence.
+   * @throws Exception If an invalid character is found in the current code.
+   */
+  function getNextCode($currentCode) {
+    $characters = array_merge(range(0, 9), range('a', 'z'), range('A', 'Z'));
+    $charCount = count($characters);
   
+    // Split the current code into an array of characters
+    $currentCodeArr = str_split($currentCode);
+    $length = count($currentCodeArr);
+  
+    // Iterate from the last character
+    for ($i = $length - 1; $i >= 0; $i--) {
+      $index = array_search($currentCodeArr[$i], $characters);
+  
+      // Check for invalid characters
+      if ($index === false) {
+        throw new Exception("Invalid character found in the current code.");
+      }
+  
+      // Increment character within the range
+      if ($index < $charCount - 1) {
+        $currentCodeArr[$i] = $characters[$index + 1];
+        return implode('', $currentCodeArr);
+      } else {
+        // Reset character and move to previous character (if exists)
+        $currentCodeArr[$i] = $characters[0];
+        if ($i === 0) {
+          // Add a new character at the beginning if all characters reset
+          return $characters[0] . implode('', $currentCodeArr);
+        }
+      }
+    }
+  }
 }
 
 ?>
