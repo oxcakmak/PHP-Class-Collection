@@ -1,6 +1,6 @@
-# DDDDDDDDD
+# Dates
 
-DDDDDDDDD section
+Dates section
 
 ### Table of Contents
 
