@@ -11,24 +11,14 @@ Everyone's time should be valuable, so please consider donating.
 
 
 ### Table of Contents
-**[Arrays](Arrays.md)**  
 **[Checks](Checks.md)**  
-**[Comprasions](Comprasions.md)**  
-**[Dates](Dates.md)**  
-**[Expressions](Expressions.md)**  
-**[Files](Files.md)**  
+**[Dates](Dates.md)**   
 **[Generators](Generators.md)**  
-**[Gets](Gets.md)**  
 **[Hashings](Hashings.md)**  
 **[Jsons](Jsons.md)**  
-**[Maths](Maths.md)**  
-**[Numbers](Numbers.md)**  
-**[Objects](Objects.md)**  
-**[Operators](Operators.md)**  
-**[Strings](Strings.md)**  
-**[Times](Times.md)**  
-**[Urls](Urls.md)**  
-**[Validates](Validates.md)**  
+**[Logics](Logics.md)**  
+**[Networks](Networks.md)**  
+**[Strings](Strings.md)**   
 
 #### Added Functions
 ```
