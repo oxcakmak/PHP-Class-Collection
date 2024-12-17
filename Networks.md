@@ -4,18 +4,17 @@ Networks section
 
 ### Table of Contents
 
-**[getDomainName](#getDomainName)**  
 **[visitorIpAddress](#visitorIpAddress)**  
-**[DDDDDDDDD](#DDDDDDDDD)**  
-**[DDDDDDDDD](#DDDDDDDDD)**  
-**[DDDDDDDDD](#DDDDDDDDD)**  
-**[DDDDDDDDD](#DDDDDDDDD)**  
-**[DDDDDDDDD](#DDDDDDDDD)**  
-**[DDDDDDDDD](#DDDDDDDDD)**  
-**[DDDDDDDDD](#DDDDDDDDD)**  
-**[DDDDDDDDD](#DDDDDDDDD)**  
-**[DDDDDDDDD](#DDDDDDDDD)**  
-**[DDDDDDDDD](#DDDDDDDDD)**  
+**[getDomainName](#getDomainName)**  
+**[getAdvancedDomainName](#getAdvancedDomainName)**  
+**[sanitizeIpAddress](#sanitizeIpAddress)**  
+
+### Preparation
+
+```php
+require_once 'Networks.php';
+$networks = new Networks();
+```
 
 ### visitorIpAddress
 
@@ -25,13 +24,6 @@ Retrieve the visitor's IP address
 // IP Address retrieval
 $ip = $networkds->visitorIpAddress();
 echo "Visitor IP Address: " . ($ip ?: 'Not Available') . "\n";
-```
-
-### Preparation
-
-```php
-require_once 'Networks.php';
-$networks = new Networks();
 ```
 
 ### getDomainName
