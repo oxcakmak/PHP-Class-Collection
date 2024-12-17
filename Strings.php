@@ -184,48 +184,4 @@ class Strings
     }
 }
 
-// Example usage:
-$string = " Hello, Dünya! PHP ile programlama hoşgeldiniz. ";
-
-// Slugify
-echo "Slugified: " . Strings::slugify($string) . "\n";
-
-// Starts with
-echo "Starts with 'Hello': " . (Strings::startsWith($string, "Hello") ? "Yes" : "No") . "\n";
-
-// Ends with
-echo "Ends with 'hoşgeldiniz.': " . (Strings::endsWith($string, "hoşgeldiniz.") ? "Yes" : "No") . "\n";
-
-// Clean
-echo "Cleaned: " . Strings::clean($string) . "\n";
-
-// XSS Clean
-$maliciousString = "<script>alert('XSS');</script>";
-echo "XSS Cleaned: " . Strings::xssClean($maliciousString) . "\n";
-
-// Encoding conversion
-$originalString = "Some text with potential encoding issues";
-$utf8String = Strings::convertToUtf8($originalString);
-echo "UTF-8 Converted: $utf8String\n";
-
-// Output sanitization
-$dirtyInput = "<script>alert('XSS');</script>Hello, World!";
-$cleanOutput = Strings::sanitizeOutput($dirtyInput);
-echo "Sanitized Output: $cleanOutput\n";
-
-// XSS Escaping
-$xssInput = "& \"' < >";
-$escapedInput = Strings::escapeXss($xssInput);
-echo "XSS Escaped: $escapedInput\n";
-
-// Whitespace stripping
-$stringWithSpaces = "  Hello   World  \n\t";
-$strippedString = Strings::stripAllWhitespace($stringWithSpaces);
-echo "Whitespace Stripped: $strippedString\n";
-
-// String truncation
-$longString = "This is a very long string that needs to be truncated without cutting words";
-$truncatedString = Strings::truncateStringWithoutCuttingWord($longString, 30);
-echo "Truncated String: $truncatedString\n";
-
 ?>
