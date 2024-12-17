@@ -1,13 +1,5 @@
 <?php
-/**
- * Dates Utility Class
- * 
- * Provides advanced date and time manipulation methods.
- * Compatible with PHP 5.6 and newer versions.
- * 
- * @package DateTimeUtilities
- * @version 1.1.1
- */
+
 class Dates {
     /**
      * Get current date and time in specified format
