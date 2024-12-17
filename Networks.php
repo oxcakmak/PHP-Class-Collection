@@ -111,30 +111,4 @@ class Networks {
     }
 }
 
-// Example usage demonstration
-try {
-    $gets = new Networks();
-
-    // Domain name examples
-    $urls = [
-        'https://www.example.com/path',
-        'http://subdomain.example.co.uk/page',
-        'www.test-site.org'
-    ];
-
-    echo "Domain Name Extraction:\n";
-    foreach ($urls as $url) {
-        echo "URL: $url\n";
-        echo "Simple Domain: " . $gets->getDomainName($url) . "\n";
-        echo "Advanced Domain (with subdomains): " . $gets->getAdvancedDomainName($url, true) . "\n";
-        echo "Advanced Domain (main domain): " . $gets->getAdvancedDomainName($url, false) . "\n\n";
-    }
-
-    // IP Address retrieval
-    $ip = $gets->visitorIpAddress();
-    echo "Visitor IP Address: " . ($ip ?: 'Not Available') . "\n";
-
-} catch (Exception $e) {
-    // Error handling
-    error_log("Gets Utility Error: " . $e->getMessage());
-}
+?>
