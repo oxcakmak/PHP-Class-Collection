@@ -20,7 +20,7 @@ Strings section
 
 ```php
 require_once 'Strings.php';
-$stringUtils = new Strings();
+$strings = new Strings();
 
 // Example usage:
 $string = " Hello, World! Welcome to programming with PHP. ";
